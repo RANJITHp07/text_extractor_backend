@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const CommentSchema = new mongoose.Schema(
+const textSchema = new mongoose.Schema(
   {
     originalImageName:{
         type:String,
@@ -17,4 +17,4 @@ const CommentSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Text", CommentSchema);
+module.exports = mongoose.model("Text", textSchema);
