@@ -17,7 +17,9 @@ connectDB();
 
 
 // Configure middleware
-app.use(cors());
+app.use(cors({
+  origin:"https://text-extractor-q1q798t18-ranjithp07s-projects.vercel.app"
+}));
 app.use(morgan('combined'));
 app.use(express.json());
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
