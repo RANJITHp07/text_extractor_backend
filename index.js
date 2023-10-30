@@ -3,7 +3,6 @@ const multer=require('multer');
 const path=require('path')
 const cors=require('cors');
 const morgan=require('morgan');
-const helmet=require('helmet')
 const connectDB=require("./db")
 const dotenv=require('dotenv')
 const TextRoute=require("./route/textRoute");
@@ -19,7 +18,6 @@ connectDB();
 
 // Configure middleware
 app.use(cors());
-app.use(helmet());
 app.use(morgan('combined'));
 app.use(express.json());
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
